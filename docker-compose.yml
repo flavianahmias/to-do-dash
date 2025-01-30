@@ -1,0 +1,12 @@
+version: '1'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: to-do-dash:latest
+    container_name: to-do-dash
+    restart: unless-stopped
+    ports:
+      - 3000:3000
+    command: npm run start
